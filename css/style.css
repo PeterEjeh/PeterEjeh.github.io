@@ -386,22 +386,24 @@ footer .container {
   font-size: 1.3em;
 }
 
-/* Header and Navbar Blending */
+/* Header and Navbar: Unified Flex Layout */
 .site-header {
-  background: #223046; /* Same as navbar */
+  background: #2c3e50; /* Or your preferred color */
   color: #fff;
   width: 100%;
   margin: 0;
   padding: 0;
-  box-shadow: none;
-  border-bottom: none;
 }
 
 .navbar {
-  background: transparent; /* Inherit from header */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: transparent;
   color: inherit;
-  padding: 0.75rem 1.5rem;
-  position: relative;
+  padding: 1.5rem 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
   box-shadow: none;
   border-bottom: none;
 }
@@ -418,7 +420,7 @@ footer .container {
 }
 
 .navbar-brand span {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: #fff;
@@ -438,13 +440,16 @@ footer .container {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
+  align-items: center;
+  background: transparent;
 }
 
 .navbar-menu li a {
   color: #fff;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1.1rem;
   transition: color 0.2s;
 }
 
@@ -455,6 +460,11 @@ footer .container {
 
 /* Mobile styles */
 @media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
   .navbar-menu {
     display: none;
     flex-direction: column;
@@ -465,12 +475,15 @@ footer .container {
     width: 100%;
     z-index: 100;
     border-top: 1px solid #1a2533;
+    gap: 1.5rem;
+    padding: 1rem 0;
   }
   .navbar-menu.active {
     display: flex;
   }
   .navbar-toggle {
     display: block;
+    margin-left: auto;
   }
 }
 
@@ -482,6 +495,7 @@ footer .container {
     position: static;
     background: none;
     width: auto;
+    gap: 3rem;
   }
   .navbar-toggle {
     display: none;
