@@ -397,7 +397,7 @@ footer .container {
 
 .navbar {
   display: flex;
-  align-items: center;
+  align-items: left;
   justify-content: space-between;
   background: transparent;
   color: inherit;
