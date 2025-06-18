@@ -401,24 +401,24 @@ footer .container {
   justify-content: space-between;
   background: transparent;
   color: inherit;
-  padding: 1.5rem 3rem;
-  max-width: 1400px;
-  margin: 0 auto;
+  padding: 1.3rem 1.5rem; /* Adjust as needed */
+  width: 100%;
 }
 
 .navbar-brand {
   display: flex;
-  align-items: left;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .navbar-brand img {
-  height: 32px;
-  margin-right: 8px;
+  height: 35px;
+  margin-left: 30px;
+  display: block;
 }
 
 .navbar-brand span {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: bold;
   letter-spacing: 1px;
   color: #fff;
@@ -438,8 +438,8 @@ footer .container {
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 3rem;
-  align-items: right;
+  row-gap: 0.5rem;
+  align-items: center;
   background: transparent;
 }
 
@@ -447,7 +447,7 @@ footer .container {
   color: #fff;
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
   transition: color 0.2s;
 }
 
@@ -473,7 +473,7 @@ footer .container {
     width: 100%;
     z-index: 100;
     border-top: 1px solid #1a2533;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 1rem 0;
   }
   .navbar-menu.active {
@@ -493,7 +493,7 @@ footer .container {
     position: static;
     background: none;
     width: auto;
-    gap: 3rem;
+    gap: 1rem;
   }
   .navbar-toggle {
     display: none;
