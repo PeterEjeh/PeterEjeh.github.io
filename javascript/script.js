@@ -60,25 +60,36 @@ document.addEventListener("DOMContentLoaded", function () {
   const sidebar = document.getElementById("sidebar");
   const closeBtn = document.getElementById("closeSidebar");
   const overlay = document.getElementById("sidebarOverlay");
+  const sidebarLinks = sidebar.querySelectorAll("a");
 
   hamburger.addEventListener("click", function () {
     sidebar.classList.add("open");
     overlay.style.display = "block";
-    hamburger.classList.add("active", "hide");
+    hamburger.classList.add("hide");
     hamburger.setAttribute("aria-expanded", "true");
   });
 
   closeBtn.addEventListener("click", function () {
     sidebar.classList.remove("open");
     overlay.style.display = "none";
-    hamburger.classList.remove("active", "hide");
+    hamburger.classList.remove("hide");
     hamburger.setAttribute("aria-expanded", "false");
   });
 
   overlay.addEventListener("click", function () {
     sidebar.classList.remove("open");
     overlay.style.display = "none";
-    hamburger.classList.remove("active", "hide");
+    hamburger.classList.remove("hide");
     hamburger.setAttribute("aria-expanded", "false");
+  });
+
+  // Close sidebar when any sidebar link is clicked
+  sidebarLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+      sidebar.classList.remove("open");
+      overlay.style.display = "none";
+      hamburger.classList.remove("hide");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
   });
 });
