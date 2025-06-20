@@ -15,18 +15,44 @@
   <body>
     <header class="site-header">
       <nav class="navbar">
-        <div class="navbar-brand">
-          <img src="img/logo.png" alt="Logo" />
-          <span>KLEENBAZE-LIMITED</span>
-          <button class="navbar-toggle" id="navbar-toggle">&#9776;</button>
+        <div class="logo">
+          <img src="img/logo.png" alt="Kleenbaze Logo" />
+          <div class="logo-text">
+            <span class="brand-name">KLEENBAZE-LIMITED</span>
+          </div>
         </div>
-        <ul class="navbar-menu" id="navbar-menu">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <ul class="nav-links">
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
         </ul>
+        <div
+          class="hamburger"
+          id="hamburger"
+          aria-label="Open menu"
+          aria-expanded="false"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </nav>
+
+      <!-- Sidebar menu (slides in from right) -->
+      <div class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <span></span>
+          <button class="close-btn" id="closeSidebar">&times;</button>
+        </div>
+        <ul>
+          <li><a href="#home">HOME</a></li>
+          <li><a href="#about">ABOUT US</a></li>
+          <li><a href="#services">SERVICES</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-overlay" id="sidebarOverlay"></div>
     </header>
 
     <section id="home" class="hero">
