@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Homepage</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -10,45 +11,61 @@
     />
   </head>
   <body>
-    <div class="container">
-      <div class="left">
-        <div class="logo">
-          <span class="logo-text"></span>
+    <!-- Navigation Header -->
+    <nav class="main-navbar">
+      <div class="nav-logo">
+        <span class="nav-logo-circle">P</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact" class="nav-contact-btn">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero/Home Section -->
+    <header class="hero">
+      <div class="hero-content">
+        <div class="hero-left">
+          <div class="hero-logo">Peter Ejeh</div>
+          <div class="hero-role">Frontend developer</div>
+          <h1 class="hero-title">
+            Hello,&nbsp; my name<br />
+            is <span>Peter Ejeh</span>
+          </h1>
+
+          <div class="hero-actions">
+            <a href="#portfolio" class="btn btn-primary">Portfolio</a>
+            <a
+              href="https://github.com/PeterEjeh"
+              class="btn btn-outline"
+              target="_blank"
+              >Github</a
+            >
+          </div>
         </div>
-        <div class="intro">
-          <p class="greeting">Hi, I am</p>
-          <h1 class="name">Peter Ejeh</h1>
-          <p class="role">Front-end Developer / UI Designer</p>
-        </div>
-        <div class="socials">
-          <a href="#" class="icon"><i class="fa-solid fa-at"></i></a>
-          <a href="#" class="icon"><i class="fab fa-github"></i></a>
-          <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+        <div class="hero-right">
+          <div class="hero-blob">
+            <img src="img/profile_img.png" alt="Profile Photo" />
+          </div>
         </div>
       </div>
-      <div class="right">
-        <nav>
-          <ul>
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Skills</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#" class="contact-btn">Contact Me</a></li>
-          </ul>
-        </nav>
-        <div class="profile-img">
-          <img src="img/profile.pn" alt="Profile Photo" />
-        </div>
-      </div>
-    </div>
+    </header>
+
     <section class="about-short">
       <div class="about-content centered">
         <div class="about-heading-box">
           <h2>About Me</h2>
         </div>
         <p class="about-desc">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem
-          varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna
-          quis libero viverra facilisis ut ac est.
+          I’m Peter Ejeh, a frontend developer who turns ideas into fast,
+          functional, and user-friendly interfaces. I thrive on collaboration
+          Let’s build something that works and looks great. and move quickly
+          without cutting corners. Whether you’ve got a clear vision or just a
+          rough sketch, I’m here to help bring it to life—exactly how you
+          imagined it, and maybe even better.
         </p>
         <div class="about-divider">
           <span></span>
@@ -155,16 +172,26 @@
         </div>
         <div class="portfolio-grid">
           <!-- Replace src with your own snapshots -->
-          <div class="portfolio-item"><img src="img/work1.jpg" alt="Project 1"></div>
-          <div class="portfolio-item"><img src="img/work2.jpg" alt="Project 2"></div>
-          <div class="portfolio-item"><img src="img/work3.jpg" alt="Project 3"></div>
-          <div class="portfolio-item"><img src="img/work4.jpg" alt="Project 4"></div>
-          <div class="portfolio-item"><img src="img/work5.jpg" alt="Project 5"></div>
-          <div class="portfolio-item"><img src="img/work6.jpg" alt="Project 6"></div>
+          <div class="portfolio-item">
+            <img src="img/work1.jpg" alt="Project 1" />
+          </div>
+          <div class="portfolio-item">
+            <img src="img/work2.jpg" alt="Project 2" />
+          </div>
+          <div class="portfolio-item">
+            <img src="img/work3.jpg" alt="Project 3" />
+          </div>
+          <div class="portfolio-item">
+            <img src="img/work4.jpg" alt="Project 4" />
+          </div>
+          <div class="portfolio-item">
+            <img src="img/work5.jpg" alt="Project 5" />
+          </div>
+          <div class="portfolio-item">
+            <img src="img/work6.jpg" alt="Project 6" />
+          </div>
         </div>
-        <div class="portfolio-more">
-          And many more to come!
-        </div>
+        <div class="portfolio-more">And many more to come!</div>
       </div>
     </section>
     <section class="contact-section">
@@ -173,7 +200,11 @@
           <h2>Contact</h2>
         </div>
         <p class="contact-desc">
-          Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est.
+          Got a project in mind? Let’s talk.<br />
+          Whether you’re ready to build, need a fresh perspective, or just want
+          to explore an idea, I’m here to help. I respond quickly and work even
+          faster—so don’t hesitate to reach out. <br />
+          Drop a message below or email me directly. I’m ready when you are.
         </p>
         <div class="contact-divider">
           <span></span>
@@ -181,13 +212,35 @@
           <span></span>
         </div>
         <form class="contact-form">
-          <input type="text" placeholder="ENTER YOUR NAME*" required>
-          <input type="email" placeholder="ENTER YOUR EMAIL*" required>
-          <input type="text" placeholder="PHONE NUMBER">
+          <input type="text" placeholder="ENTER YOUR NAME*" required />
+          <input type="email" placeholder="ENTER YOUR EMAIL*" required />
+          <input type="text" placeholder="PHONE NUMBER" />
           <textarea placeholder="YOUR MESSAGE*" required></textarea>
           <button type="submit">SUBMIT</button>
         </form>
       </div>
     </section>
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="footer-top">
+          <a href="#" class="back-to-top">
+            <i class="fa-solid fa-angle-up"></i>
+            <span>Back to Top</span>
+          </a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" class="footer-icon"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="footer-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="footer-icon"
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
+        </div>
+        <div class="footer-copy">
+          &copy;2025 <b>Peter Ejeh</b> All Rights Reserved.
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
